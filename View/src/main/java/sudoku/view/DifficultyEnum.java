@@ -22,7 +22,7 @@ public enum DifficultyEnum {
      * 
      * @param sudokuBoard the Sudoku board to clear fields from
      */
-    public void clearSudokuFieldsFromSudokuBoardBasedOnDifficulty(SudokuBoard sudokuBoard) {
+    public void clearSudokuFieldsFromSudokuBoardBasedOnDifficulty(SudokuBoard sudokuBoard, Random random) {
         // TODO - think about the size of the board
 
         int numberOfFieldsToClear = 0;
@@ -40,7 +40,6 @@ public enum DifficultyEnum {
                 break;
         }
 
-        Random random = new Random();
         int fieldsCleared = 0;
         // int boardSize = sudokuBoard.getSize();
         int boardSize = 9;

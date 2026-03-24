@@ -25,6 +25,7 @@ import sudoku.view.strategies.SaveSudokuBoardToDatabaseStrategy;
 import sudoku.view.strategies.SaveSudokuBoardToFileStrategy;
 
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class GameController implements Initializable {
@@ -71,7 +72,7 @@ public class GameController implements Initializable {
                 e.printStackTrace();
             }
 
-            gameDifficulty.clearSudokuFieldsFromSudokuBoardBasedOnDifficulty(sudokuBoard);
+            gameDifficulty.clearSudokuFieldsFromSudokuBoardBasedOnDifficulty(sudokuBoard, new Random());
         }
 
         initSudokuBoardGridPane();
